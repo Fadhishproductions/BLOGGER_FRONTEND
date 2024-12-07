@@ -137,7 +137,7 @@ const MyBlogsPage = () => {
                 Previous
               </button>
             </li>
-            {Array.from({ length: data?.pages }).map((_, index) => (
+            {Array.from({ length: data?.totalPages }).map((_, index) => (
               <li
                 key={index}
                 className={`page-item ${page === index + 1 ? 'active' : ''}`}
@@ -150,11 +150,11 @@ const MyBlogsPage = () => {
                 </button>
               </li>
             ))}
-            <li className={`page-item ${page === data?.pages ? 'disabled' : ''}`}>
+            <li className={`page-item ${page === data?.totalPages ? 'disabled' : ''}`}>
               <button
                 className="page-link"
                 onClick={() => setPage(page + 1)}
-                disabled={page === data?.pages}
+                disabled={page === data?.totalPages}
               >
                 Next
               </button>

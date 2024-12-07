@@ -49,8 +49,8 @@ export const blogApi = apiSlice.injectEndpoints({
 
       //my Blogs
       getMyBlogs: builder.query({
-        query: () => ({
-          url: '/blogs/my-blogs',
+        query: ({page,search}) => ({
+          url: `/blogs/my-blogs?page=${page}&search=${search}`,
         }),
         providesTags: ['MyBlogs'],
       }),

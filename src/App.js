@@ -9,14 +9,14 @@ import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import SingleBlogPage from './screens/SingleBlogPage';
 import MyBlogsPage from './screens/MyBlogsPage';
-
+ 
 const App = () => {
   console.log(process.env)
   return ( <>
 
     <Router>
       <Header/>
-      <ToastContainer/>
+       <ToastContainer/>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
